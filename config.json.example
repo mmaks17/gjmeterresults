@@ -1,0 +1,7 @@
+{
+    "jurl":"http://jenkins.example.com/",
+    "jlogin":"jenkinsuser",
+    "jpassword":"jenkunsuserpassword",
+    "gurl":"http://grafana.example.com/api/datasources/proxy/7",
+    "gkey":"sdfIjoiZ0ptZXsdfdfsdfsdRlcisdfIsdfsImlsdfkIjosdfxfQ=="
+}
