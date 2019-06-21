@@ -1,5 +1,6 @@
 {
     "jurl":"http://jenkins.example.com/",
+    "jtask":"load-testing",
     "jlogin":"jenkinsuser",
     "jpassword":"jenkunsuserpassword",
     "gurl":"http://grafana.example.com/api/datasources/proxy/7",

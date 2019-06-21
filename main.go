@@ -15,6 +15,7 @@ import (
 
 type conf struct {
 	Jurl      string `json:"jurl"`
+	Jtask     string `json:"jtask"`
 	Jlogin    string `json:"jlogin"`
 	Jpassword string `json:"jpassword"`
 	Gurl      string `json:"gurl"`
@@ -81,7 +82,7 @@ func init() {
 }
 
 func getBingo() {
-	jobName := "goldapple-stage-load-testing"
+	jobName := config.Jtask
 	jenkins := gojenkins.CreateJenkins(config.Jurl, config.Jlogin, config.Jpassword)
 	_, err := jenkins.Init()
 	if err != nil {
