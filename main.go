@@ -175,11 +175,8 @@ func getBingo() {
 		}
 	}
 	fmt.Printf("Будет обработано  сборок: %d \n\r", len(bstr))
-	if len(bstr) >= 2 {
-		//		fmt.Printf("%+v\n", bstr[0])
-		//		fmt.Printf("%+v\n", bstr[1])
-	} else {
-		log.Println("  недостаточно данных, обработано менее 2х сборок")
+	if len(bstr) < 2 {
+		log.Panic("  недостаточно данных, обработано менее 2х сборок")
 	}
 }
 
@@ -224,32 +221,32 @@ func main() {
 		t[i].calcRez()
 		//fmt.Printf("#%d%+v\n", i, t[i].)
 	}
-	/*
 
-		if (t[0].Home-t[1].Home)/t[1].Home*100 > infelicity {
-			fmt.Println("home page")
-			fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Home, t[1].Home, (t[0].Home-t[1].Home)/t[1].Home*100)
-		}
-		if (t[0].Addtocart-t[1].Addtocart)/t[1].Addtocart*100 > infelicity {
-			fmt.Println("Addtocart page")
-			fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Addtocart, t[1].Addtocart, (t[0].Addtocart-t[1].Addtocart)/t[1].Addtocart*100)
-		}
+	if (t[0].Home-t[1].Home)/t[1].Home*100 > infelicity {
+		fmt.Println("home page SLOW")
+		//fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Home, t[1].Home, (t[0].Home-t[1].Home)/t[1].Home*100)
+	}
+	if (t[0].Addtocart-t[1].Addtocart)/t[1].Addtocart*100 > infelicity {
+		fmt.Println("Addtocart page  SLOW")
+		//fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Addtocart, t[1].Addtocart, (t[0].Addtocart-t[1].Addtocart)/t[1].Addtocart*100)
+	}
 
-		if (t[0].Category-t[1].Category)/t[1].Category*100 > infelicity {
-			fmt.Println("Category page")
-			fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Category, t[1].Category, (t[0].Category-t[1].Category)/t[1].Category*100)
-		}
+	if (t[0].Category-t[1].Category)/t[1].Category*100 > infelicity {
+		fmt.Println("Category page  SLOW")
+		//fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Category, t[1].Category, (t[0].Category-t[1].Category)/t[1].Category*100)
+	}
 
-		if (t[0].Product-t[1].Product)/t[1].Product*100 > infelicity {
-			fmt.Println("Product page")
-			fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Product, t[1].Product, (t[0].Product-t[1].Product)/t[1].Product*100)
-		}
+	if (t[0].Product-t[1].Product)/t[1].Product*100 > infelicity {
+		fmt.Println("Product page  SLOW")
+		//fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].Product, t[1].Product, (t[0].Product-t[1].Product)/t[1].Product*100)
+	}
 
-		if (t[0].FullCheckout-t[1].FullCheckout)/t[1].FullCheckout*100 > infelicity {
-			fmt.Println("FullCheckout page")
-			fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].FullCheckout, t[1].FullCheckout, (t[0].FullCheckout-t[1].FullCheckout)/t[1].FullCheckout*100)
-		}
-	*/
+	if (t[0].FullCheckout-t[1].FullCheckout)/t[1].FullCheckout*100 > infelicity {
+		fmt.Println("FullCheckout page  SLOW")
+		//fmt.Printf("new: %.2f; old: %.2f,  значения увеличились на: %.2f %%\n", t[0].FullCheckout, t[1].FullCheckout, (t[0].FullCheckout-t[1].FullCheckout)/t[1].FullCheckout*100)
+	}
+
+	fmt.Println("//***********DEBUG_INFO****************************************************/")
 	fmt.Printf("new: %.0f; old: %.0f,  значения Home  изменились  на: %.0f %%\n", t[0].Home, t[1].Home, (t[0].Home-t[1].Home)/t[1].Home*100)
 	fmt.Printf("new: %.0f; old: %.0f,  значения Addtocart изменились на: %.0f %%\n", t[0].Addtocart, t[1].Addtocart, (t[0].Addtocart-t[1].Addtocart)/t[1].Addtocart*100)
 	fmt.Printf("new: %.0f; old: %.0f,  значения Category изменились на: %.0f %%\n", t[0].Category, t[1].Category, (t[0].Category-t[1].Category)/t[1].Category*100)
