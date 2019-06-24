@@ -253,6 +253,4 @@ func main() {
 	fmt.Printf("new: %.0f; old: %.0f,  значения Product изменились на: %.0f %%\n", t[0].Product, t[1].Product, (t[0].Product-t[1].Product)/t[1].Product*100)
 	fmt.Printf("new: %.0f; old: %.0f,  значения FullCheckout изменились на: %.0f %%\n", t[0].FullCheckout, t[1].FullCheckout, (t[0].FullCheckout-t[1].FullCheckout)/t[1].FullCheckout*100)
 
-	//fmt.Println("All results on:  http://g.oggy.co/d/9OandKmWz/jmeter-load-test?orgId=1")
-
 }
